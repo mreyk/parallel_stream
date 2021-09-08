@@ -5,7 +5,7 @@ defmodule ParallelStream.Mixfile do
     [
       app: :parallel_stream,
       version: "1.0.6",
-      elixir: "~> 1.1",
+      elixir: "~> 1.12",
       deps: deps(),
       package: package(),
       docs: &docs/0,
@@ -28,11 +28,11 @@ defmodule ParallelStream.Mixfile do
 
   defp deps do
     [
-      {:excoveralls, "~> 0.5", only: :test},
-      {:ex_doc, only: :docs},
-      {:inch_ex, only: :docs},
-      {:earmark, only: :docs},
-      {:benchfella, "~> 0.3.0", only: [:bench]}
+      {:excoveralls, "~> 0.14.2", only: :test},
+      {:ex_doc, "~> 0.25.2", only: :docs},
+      {:inch_ex, "~> 2.0.0", only: :docs},
+      {:earmark, "~> 1.4.15", only: :docs},
+      {:benchfella, "~> 0.3.5", only: [:bench]}
     ]
   end
 
